@@ -1,6 +1,6 @@
 <?php
 
-    header('Content-Type: application/json');
+    // header('Content-Type: application/json');
 
     //inclui os arquivos
     include 'core/vars.php';
@@ -24,6 +24,9 @@
     }
     if(!isset($_Retorno['msg'])){
         $_Retorno['msg'] = "Sem mensagem";
+    }
+    if(!isset($_Retorno['erroInterno'])){
+        $_Retorno['erroInterno'] = false;
     }
     
     //retorna os valores
