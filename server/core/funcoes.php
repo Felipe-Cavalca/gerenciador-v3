@@ -7,5 +7,5 @@
  * @return string
  */
 function pr($data){
-    return '<pre>'.print_r($data, true).'</pre>';
+    echo '<pre>'.print_r($data, true).'</pre>';
 }
