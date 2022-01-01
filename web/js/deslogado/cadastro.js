@@ -43,18 +43,25 @@ const Dados = {
                 this.erros.push('O confirmaSenha é obrigatório.');
                 $("#confirmaSenha").addClass('is-invalid');
             } else {
-                $("#confirmaSenha").removeClass('is-invalid');
+                if(this.senha != this.confirmaSenha) {
+                    valido = false;
+                    this.erros.push('As senhas não batem');
+                    $("#confirmaSenha").addClass('is-invalid');
+                }else{
+                    $("#confirmaSenha").removeClass('is-invalid');
+                }
             }
 
-            // if (valido) {
-            //     axios.post(_UrlServer + '/', {})
-            //         .then(function (response) {
-            //             console.log(response);
-            //         })
-            //         .catch(function (error) {
-            //             console.log(error);
-            //         });
-            // }
+            if (valido) {
+                axios.post(_UrlServer + '/deslogado/cadastro', $('#form').serialize())
+                    .then(function (response) {
+                        console.log(response.data);
+                    })
+                    .catch(function (response) {
+                        console.log(response.data);
+                        this.erros.push('Houve um erro');
+                    });
+            }
 
 
         }

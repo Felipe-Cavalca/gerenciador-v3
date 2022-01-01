@@ -15,23 +15,23 @@
     </section>
     <section id="app">
         <h1>Cadastro</h1>
-        <form @submit="validaDados" method="post" autocomplete='on' class="pt-3">
+        <form @submit="validaDados" id="form" method="post" autocomplete='on' class="pt-3">
             <div class="container">
                 <div class="row">
                     <div class="form-floating mb-3 col-6">
-                        <input type="text" class="form-control" id="nome" placeholder=" " v-model="nome">
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder=" " v-model="nome">
                         <label for="nome">&nbsp;&nbsp;&nbsp;Nome: </label>
                     </div>
                     <div class="form-floating mb-3 col-6">
-                        <input type="email" class="form-control" id="email" placeholder=" " v-model="email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder=" " v-model="email">
                         <label for="email">&nbsp;&nbsp;&nbsp;Email: </label>
                     </div>
                     <div class="form-floating mb-3 col-6">
-                        <input type="password" class="form-control" id="senha" placeholder=" " v-model="senha">
+                        <input type="password" class="form-control" id="senha" name="senha" placeholder=" " v-model="senha">
                         <label for="senha">&nbsp;&nbsp;&nbsp;Senha: </label>
                     </div>
                     <div class="form-floating mb-3 col-6">
-                        <input type="password" class="form-control" id="confirmaSenha" placeholder=" "
+                        <input type="password" class="form-control" id="confirmaSenha" name="confirmaSenha" placeholder=" "
                             v-model="confirmaSenha">
                         <label for="confirmaSenha">&nbsp;&nbsp;&nbsp;Confirmação da senha: </label>
                     </div>
@@ -56,6 +56,7 @@
     <script src="../../framework/bootstrap-5.1.3/js/bootstrap.js"></script>
     <script src="../../framework/jquery-3.6.0.min.js"></script>
     <script src="../../framework/vue.global.js"></script>
+    <script src="../../framework/axios.min.js"></script>
     <script src="../../core/vars.js"></script>
     <script src="../../js/deslogado/cadastro.js"></script>
 </body>
