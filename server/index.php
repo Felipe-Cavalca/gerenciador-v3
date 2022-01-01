@@ -1,4 +1,7 @@
 <?php
+
+    header('Content-Type: application/json');
+
     //inclui os arquivos
     include 'core/vars.php';
     include 'core/funcoes.php';
