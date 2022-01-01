@@ -61,12 +61,12 @@
 
             //faz o insert
             if($sth->execute($dados)){
-                return ['statusBanco' => true, 'id' => $pdo->lastInsertId()];
+                return ['status' => true, 'id' => $pdo->lastInsertId()];
             }else{
                 throw new Exception('O dado não foi inserido');
             }
         }catch(Exception $e){
-            return ['statusBanco' => false];
+            return ['status' => false];
         }
         
     }
@@ -139,9 +139,9 @@
                 }
             }
             
-            return ['statusBanco' => true, 'retorno' => $retorno];
+            return ['status' => true, 'retorno' => $retorno];
         }catch(Exception $e){
-            return ['statusBanco' => false];
+            return ['status' => false];
         }
     }
     
@@ -170,9 +170,9 @@
                 }
             }
 
-            return ['statusBanco' => true, 'retorno' => $retorno];
+            return ['status' => true, 'retorno' => $retorno];
         }catch(Exception $e){
-            return ['statusBanco' => false];
+            return ['status' => false];
         }
     }
 
@@ -190,9 +190,9 @@
                 $retorno[] = $res; 
             }
 
-            return ['statusBanco' => true, 'retorno' => $retorno];
+            return ['status' => true, 'retorno' => $retorno];
         }catch(Exception $e){
-            return ['statusBanco' => false];
+            return ['status' => false];
         }
     }
 ?>
