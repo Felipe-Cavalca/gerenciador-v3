@@ -53,17 +53,15 @@ const Dados = {
             }
 
             if (valido) {
-                axios.post(_UrlServer + '/deslogado/cadastro', $('#form').serialize())
-                    .then(function (response) {
-                        console.log(response.data);
-                    })
-                    .catch(function (response) {
-                        console.log(response.data);
-                        this.erros.push('Houve um erro');
-                    });
+
+                        // if(response.data.status){
+        //     window.location('../home.html');
+        // }else if(response.data.erroInterno){
+        //     throw new Error('erro')
+        // }else {
+        //     this.erros.push(response.data.msg);
+        // }
             }
-
-
         }
     }
 }

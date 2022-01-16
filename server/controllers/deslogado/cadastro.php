@@ -4,6 +4,8 @@ try{
     //extrai as variaveis recebidas
     extract($_POST);
 
+    throw new Exception('erro');
+
     //monta o array da query
     $query =[
         'tabela' => 'usuario',
